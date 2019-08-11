@@ -22,10 +22,11 @@ public class ProductService {
     }
 
     @Transactional(readOnly = false) //blokuje rekord do zmiany przez innych uzytkownikow
-    public void createProduct(ProductDto productDto){
+    public void createProduct(ProductDto productDto) {
 
         Product product = toEntity(productDto);
-                this.productRepository.save(product);
+       // product.setAmount(getAmountByName(product.getProductName())+1);
+        this.productRepository.save(product);
     }
 
     @Transactional(readOnly = true)
@@ -47,4 +48,16 @@ public class ProductService {
     public void updateProduct(ProductDto productDto) {
         productRepository.save(toEntity(productDto));
     }
+
+    //@Transactional(readOnly = true)
+//    public int getAmountByName(String productName) {
+//        int amount = 0;
+//        for (Product product : this.productRepository.findAll()) {
+//            if(product.getProductName().equals(productName)){
+//                amount++;
+//            }
+//        }
+//
+//        return amount;
+//    }
 }

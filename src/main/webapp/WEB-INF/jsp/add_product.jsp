@@ -26,6 +26,10 @@
             <form:input class="form-control" path="price" required="true"/>
         </div>
 
+        <div class="form-group">
+            <form:label path="amount">Amount</form:label>
+            <form:input class="form-control" path="amount" required="true"/>
+        </div>
         <form:button class="btn btn-primary" type="submit" value="Submit">Submit</form:button>
     </form:form>
 </div>

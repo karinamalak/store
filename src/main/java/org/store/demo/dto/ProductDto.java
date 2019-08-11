@@ -17,6 +17,17 @@ public class ProductDto {
     @NotNull
     private Integer price;
 
+
+    private Integer amount;
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
     public Long getId() {
         return id;
     }

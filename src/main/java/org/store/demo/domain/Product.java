@@ -24,6 +24,17 @@ public class Product {
     @Column(name = "price", nullable = false)
     private Integer price;
 
+    @Column(name = "amount", nullable = false)
+    private Integer amount;
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
     public Long getId() {
         return id;
     }

@@ -16,6 +16,7 @@
             <th>Product name</th>
             <th>Category</th>
             <th>Price</th>
+            <th>Amount</th>
             <th>Actions</th>
         </tr>
         <c:forEach items="${products}" var="product">
@@ -23,6 +24,7 @@
                 <td>${product.productName}</td>
                 <td>${product.category}</td>
                 <td>${product.price}</td>
+                <td>${product.amount}</td>
                 <td>
                     <form action="/deleteProduct" method="post" onclick="return confirm('Are you sure you want to delete product?');">
                         <input hidden name="id" value="${product.id}">
